@@ -6,10 +6,14 @@ import './Block1.scss'
 interface Block1Props {}
 
 const Block1 = (props: Block1Props) => {
+  const onClick = () => {
+    console.log("onClick")
+  }
+
   return (
     <Container fluid className="Block1 p-0">
       <div className="d-flex flex-wrap">
-        <ButtonComponent>
+        <ButtonComponent onClick={onClick}>
           <div className="ButtonComponent__default">Связаться</div>
         </ButtonComponent>
       </div>
