@@ -14,7 +14,7 @@ const Block1 = (props: Block1Props) => {
     <Container fluid className="Block1 p-0">
       <div className="d-flex flex-wrap">
         <ButtonComponent onClick={onClick}>
-          <div className="ButtonComponent__default">Связаться</div>
+          <div>Связаться</div>
         </ButtonComponent>
       </div>
     </Container>
