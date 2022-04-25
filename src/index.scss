@@ -3,6 +3,253 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,700&display=swap');
 @import 'animate.css/animate.min.css';
 
+// TTNorms
+@font-face {
+  font-family: 'TTNorms-Black';
+  src: url('./fonts/TTNorms/TTNorms-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'TTNorms-BlackItalic';
+  src: url('./fonts/TTNorms/TTNorms-BlackItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-Bold';
+  src: url('./fonts/TTNorms/TTNorms-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-BoldItalic';
+  src: url('./fonts/TTNorms/TTNorms-BoldItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-ExtraBold';
+  src: url('./fonts/TTNorms/TTNorms-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-ExtraBoldItalic';
+  src: url('./fonts/TTNorms/TTNorms-ExtraBoldItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-ExtraLight';
+  src: url('./fonts/TTNorms/TTNorms-ExtraLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-ExtraLightItalic';
+  src: url('./fonts/TTNorms/TTNorms-ExtraLightItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-Heavy';
+  src: url('./fonts/TTNorms/TTNorms-Heavy.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-HeavyItalic';
+  src: url('./fonts/TTNorms/TTNorms-HeavyItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-Italic';
+  src: url('./fonts/TTNorms/TTNorms-Italic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-Light';
+  src: url('./fonts/TTNorms/TTNorms-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-LightItalic';
+  src: url('./fonts/TTNorms/TTNorms-LightItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-Medium';
+  src: url('./fonts/TTNorms/TTNorms-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-MediumItalic';
+  src: url('./fonts/TTNorms/TTNorms-MediumItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-Regular';
+  src: url('./fonts/TTNorms/TTNorms-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-Thin';
+  src: url('./fonts/TTNorms/TTNorms-Thin.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TTNorms-ThinItalic';
+  src: url('./fonts/TTNorms/TTNorms-ThinItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+// SFPro
+@font-face {
+  font-family: 'SFProDisplay-Black';
+  src: url('./fonts/SFPro/SFProDisplay-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-BlackItalic';
+  src: url('./fonts/SFPro/SFProDisplay-BlackItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Bold';
+  src: url('./fonts/SFPro/SFProDisplay-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-BoldItalic';
+  src: url('./fonts/SFPro/SFProDisplay-BoldItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Heavy';
+  src: url('./fonts/SFPro/SFProDisplay-Heavy.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-HeavyItalic';
+  src: url('./fonts/SFPro/SFProDisplay-HeavyItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Light';
+  src: url('./fonts/SFPro/SFProDisplay-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-LightItalic';
+  src: url('./fonts/SFPro/SFProDisplay-LightItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Medium';
+  src: url('./fonts/SFPro/SFProDisplay-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-MediumItalic';
+  src: url('./fonts/SFPro/SFProDisplay-MediumItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Regular';
+  src: url('./fonts/SFPro/SFProDisplay-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-RegularItalic';
+  src: url('./fonts/SFPro/SFProDisplay-RegularItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Semibold';
+  src: url('./fonts/SFPro/SFProDisplay-Semibold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-SemiboldItalic';
+  src: url('./fonts/SFPro/SFProDisplay-SemiboldItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Thin';
+  src: url('./fonts/SFPro/SFProDisplay-Thin.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Ultralight';
+  src: url('./fonts/SFPro/SFProDisplay-Ultralight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-UltralightItalic';
+  src: url('./fonts/SFPro/SFProDisplay-UltralightItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
 html,
 body {
   height: 100%;

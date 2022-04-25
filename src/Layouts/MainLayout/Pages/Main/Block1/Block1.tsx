@@ -1,13 +1,18 @@
-import React from "react"
-import { Container } from "react-bootstrap"
+import React from 'react'
+import { Container, Row } from 'react-bootstrap'
+import ButtonComponent from '../../../../../SharedComponents/ButtonComponent/ButtonComponent'
 import './Block1.scss'
 
 interface Block1Props {}
 
 const Block1 = (props: Block1Props) => {
   return (
-    <Container className="Block1">
-      <h1>Block1</h1>
+    <Container fluid className="Block1 p-0">
+      <div className="d-flex flex-wrap">
+        <ButtonComponent>
+          <div className="ButtonComponent__default">Связаться</div>
+        </ButtonComponent>
+      </div>
     </Container>
   )
 }

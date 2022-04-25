@@ -1,31 +1,18 @@
 .ButtonComponent {
-  background-color: #0068a5;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  cursor: pointer;  
+  .ButtonComponent__default {
+    background-color: #1dacd6;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 
-  .NavbarMenuItem__icon {
-    svg {
-      fill: #f8f9fa;
-    }
+    font-family: 'TTNorms-Bold';
+    font-size: 20px;
+    line-height: 24px;
   }
 
-  .NavbarMenuItem__title {
-    color: #f8f9fa;
-  }
-
-  &:hover {
-    background-color: #0176b9;
-
-    .NavbarMenuItem__icon {
-      svg {
-        fill: #f8f9fa;
-      }
-    }
-
-    .NavbarMenuItem__title {
-      color: #f8f9fa;
-    }
-  }
+  cursor: pointer;
 }
