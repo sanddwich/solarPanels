@@ -16,6 +16,40 @@
 
   .Block1__Row1 {
     padding-top: 70px;
+    
+    @media screen and(max-width: 576px) {
+      padding-top: 50px;
+    }
+  }
+
+  .Block1__title {
+    padding-top: 100px;
+    font-family: 'SFProDisplay-Semibold';
+    font-size: 72px;
+    line-height: 86px;
+    text-align: center;
+
+    @media screen and(max-width: 1200px) {
+      padding-top: 50px;
+      font-size: 52px;
+      line-height: 60px;
+    }
+
+    @media screen and(max-width: 768px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    
+    @media screen and(max-width: 576px) {
+      padding-top: 50px;
+      font-size: 28px;
+      line-height: 33px;
+      text-align: left;
+    }
+  }
+  
+  .Block1__subtitle {    
+    font-family: 'TTNorms-Bold';
   }
 
   .Block1__Logo {
@@ -24,12 +58,21 @@
       font-family: 'SFProDisplay-Semibold';
       font-size: 32px;
       line-height: 38px;
+      
+      @media screen and(max-width: 576px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
 
     .Block1__LogoLine {
       padding-top: 10px;
       width: 65px;
       border-bottom: #ffffff 3px solid;
+      
+      @media screen and(max-width: 576px) {
+        display: none;
+      }
     }
   }
 
@@ -71,7 +114,7 @@
     min-height: 668px;
   }
   @media screen and(max-width: 960px) {
-    min-height: 440px;
+    min-height: 540px;
   }
   @media screen and(max-width: 854px) {
     min-height: 480px;
