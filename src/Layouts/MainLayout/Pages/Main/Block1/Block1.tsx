@@ -1,18 +1,20 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { connect } from 'react-redux'
+import { RootState } from '../../../../../Redux'
+import { setMobileMenuModal } from '../../../../../Redux/actions/modal'
 import ButtonComponent from '../../../../../SharedComponents/ButtonComponent/ButtonComponent'
 import './Block1.scss'
 
-interface Block1Props {}
+interface Block1Props {  
+  setMobileMenuModal: (isActive: boolean) => void
+}
 
 const Block1 = (props: Block1Props) => {
-  const onClick = () => {
-    console.log('onClick')
-  }
-  
   const callOrder = () => {
     console.log('callOrder')
   }
+
   return (
     <Container
       fluid
@@ -42,18 +44,21 @@ const Block1 = (props: Block1Props) => {
               <div>Заказать звонок</div>
             </ButtonComponent>
           </div>
+          <div className="Block1__burger d-block d-sm-none" onClick={() => props.setMobileMenuModal(true)}>
+            <img src="/img/burger.svg" alt="Меню" />
+          </div>
         </div>
 
-        <Row className='Block1__titleRow d-flex justify-content-center'>
-          <Col xs={12} xxl={9} className='Block1__titleCol'>
-            <div className='Block1__title'>
-              Солнечные электростанции для дома и бизнеса
-            </div>
+        <Row className="Block1__titleRow d-flex justify-content-center">
+          <Col xs={12} xxl={9} className="Block1__titleCol">
+            <div className="Block1__title">Солнечные электростанции для дома и бизнеса</div>
           </Col>
         </Row>
 
-        <div className='Block1__subtitle'>
-          Шагни в будущее вместе с нами
+        <div className="Block1__subtitle">Шагни в будущее вместе с нами</div>
+
+        <div className="Block1__buttonCont d-flex justify-content-start justify-content-sm-center">
+          <ButtonComponent onClick={callOrder}>Связаться</ButtonComponent>
         </div>
       </Container>
 
@@ -66,4 +71,15 @@ const Block1 = (props: Block1Props) => {
   )
 }
 
-export default Block1
+const mapDispatchToProps = {
+  setMobileMenuModal,
+}
+
+const mapStateToProps = (state: RootState) => {
+  const modal = state.modal
+  return {
+    modal,
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Block1)

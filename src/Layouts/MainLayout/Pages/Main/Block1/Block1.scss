@@ -16,7 +16,7 @@
 
   .Block1__Row1 {
     padding-top: 70px;
-    
+
     @media screen and(max-width: 576px) {
       padding-top: 50px;
     }
@@ -39,7 +39,7 @@
       font-size: 32px;
       line-height: 40px;
     }
-    
+
     @media screen and(max-width: 576px) {
       padding-top: 50px;
       font-size: 28px;
@@ -47,9 +47,37 @@
       text-align: left;
     }
   }
-  
-  .Block1__subtitle {    
+
+  .Block1__subtitle {
     font-family: 'TTNorms-Bold';
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 125%;
+    padding-top: 50px;
+
+    @media screen and(max-width: 768px) {
+      padding-top: 30px;
+      letter-spacing: 0.1em;
+      font-size: 14px;
+    }
+    
+    @media screen and(max-width: 576px) {
+      text-align: left;
+    }
+  }
+
+  .Block1__buttonCont {
+    padding-top: 50px;
+
+    @media screen and(max-width: 576px) {
+      padding-top: 40px;
+    }
+  }
+  
+  .Block1__burger {
+    padding-right: 20px;
   }
 
   .Block1__Logo {
@@ -58,7 +86,7 @@
       font-family: 'SFProDisplay-Semibold';
       font-size: 32px;
       line-height: 38px;
-      
+
       @media screen and(max-width: 576px) {
         font-size: 20px;
         line-height: 24px;
@@ -69,7 +97,7 @@
       padding-top: 10px;
       width: 65px;
       border-bottom: #ffffff 3px solid;
-      
+
       @media screen and(max-width: 576px) {
         display: none;
       }
@@ -94,7 +122,6 @@
       padding: 0;
       width: 200px;
     }
-
   }
 
   .ButtonComponent {
@@ -121,5 +148,8 @@
   }
   @media screen and(max-width: 640px) {
     min-height: 360px;
+  }  
+  @media screen and(max-width: 576px) {
+    min-height: 600px;
   }
 }

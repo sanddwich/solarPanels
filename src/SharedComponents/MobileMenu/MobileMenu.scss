@@ -1,43 +1,152 @@
 .MobileMenu {
   position: fixed;
-  top: 80px;
+  top: 0;
   bottom: 0;
   z-index: 1000;
-  padding-top: 20px !important;
   animation-duration: 0.4s;
-  background-color: #343a40;
-  border-top:  1px solid #f8f9fa;
-  padding: 0;
+  background-color: #ffffff;
+  padding-bottom: 30px !important;
 
   overflow-y: scroll;
 
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-size: 18px;font-weight: 500;
-  color: #f8f9fa;
-
-  .MobileMenu__closeBtn {
-    padding-top: 10px;
-    padding-right: 60px;
+  .MobileMenu__oneRow {
+    padding: 20px;
+    padding-top: 30px;
   }
 
-  .MobileMenu__Row, .MobileMenu__closeBtnCont {
-    margin: 0;
+  .MobileMenu__logo {
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'SFProDisplay-Semibold';
   }
 
-  .MobileMenu__menuEl {
+  .MobileMenu__closeButton {
+    margin-right: 20px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .MobileMenu__buttonCont {
+    margin-top: 10px;
+    padding-left: 20px;
+
+    .ButtonComponent {
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #1dacd6;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 22px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      background-color: #ffffff;
+      border: #1dacd6 2px solid;
+    }
+  }
+
+  .MobileMenu__menuBlock {
+    padding-top: 30px !important;
+    ul {
+      padding-left: 20px;
+      font-family: 'TTNorms-Medium';
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+
+      li {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  .MobileMenu__phone {
+    padding: 20px;
+
+    .MobileMenu__phoneIcon {
+      padding-right: 15px;
+    }
+
+    .MobileMenu__phoneNumber {
+      a {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 125%;
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .MobileMenu__socialLinks {
     padding: 10px;
-    border-bottom: 1px dashed #f8f9fa;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    img {
+      padding-right: 20px;
+    }
   }
 
+  .MobileMenu__messengersCont {
+    height: 100%;
+    margin-top: -277px !important;
+    .MobileMenu__messengers {
+      background-color: #8ebe2d;
+      height: 350px;
+      border-radius: 20px 20px 0px 20px;
 
-  &::-webkit-scrollbar {
-    width: 5px;
-  }   
-  &::-webkit-scrollbar-track {
-    border-radius: 3px;
-  }   
-  &::-webkit-scrollbar-thumb {
-    background-color: #7dbaec;
+      h1 {
+        font-family: 'Druk Cyr';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: left;
+        color: #000000;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 135%;
+        /* or 19px */
+
+        color: #000000;
+      }
+    }
+
+    .IconButton {
+      filter: drop-shadow(0px 8px 13px rgba(0, 0, 0, 0.13));
+      margin-bottom: 15px;
+
+      font-family: 'Montserrat';
+      font-size: 16px;
+      line-height: 145%;
+    }
+
+    .MobileMenu__photo {
+      img {
+        width: 200px;
+      }
+    }
+  }
+
+  .MobileMenu__LeftContent {
+    position: relative;
+    z-index: 10;
+  }
+
+  .MobileMenu__MC {
+    overflow: hidden;
   }
 }
