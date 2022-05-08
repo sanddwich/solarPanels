@@ -254,7 +254,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Roboto';
+  font-family: 'Roboto', serif;
   font-size: 14px;
 }
 
@@ -265,6 +265,57 @@ code {
 #root {
   height: 100%;
   width: 100%;
+}
+
+h2{
+  font-family: 'SF Pro Display', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 76px;
+  color: #202020;
+}
+h3{
+  font-family: 'SF Pro Display', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #202020;
+}
+
+h4{
+  font-family: 'SF Pro Display', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #202020;
+}
+h5{
+  font-family: 'SF Pro Display', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #202020;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #1DACD6;
+  font-weight: bold;
+  font-size: 40px;
+  display: inline-block;
+  width: 0.5em;
+  margin-left: -0.5em;
+}
+ul li{
+margin: 10px 0px;
 }
 
 //=============== АНИМАШКИ ==============================

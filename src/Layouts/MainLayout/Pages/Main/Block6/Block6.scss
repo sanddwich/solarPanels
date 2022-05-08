@@ -1,0 +1,39 @@
+.Block6 {
+  background-color: #E5E5E5;;
+  min-height: 400px;
+  padding: 100px 0px;
+  .ButtonComponent {
+    // background-color: aquamarine;
+  }
+
+  .Block6__card{
+    margin: 40px 0px;
+  }
+
+  .Block6__card-img{
+    border-radius: 8px;
+    width: 500px;
+    height: 300px;
+    img{
+      border-radius: 8px;
+    }
+  }
+
+  .Block6__card-text{
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #696969;
+
+    h5{
+      margin: 50px 0px;
+    }
+  }
+
+  @media screen and(max-width: 1920px) {
+    
+  }
+}
