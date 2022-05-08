@@ -1,3 +1,124 @@
 .MainFooter {
-  
+  display: flex;
+  background-color: #3C3C3C;
+  width: 100%;
+  font-family: 'TTNorms-Medium', serif;
+
+  .MainFooter__navigation {
+    align-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .MainFooter__navigationEl {
+      color: #ffffff;
+      font-size: 18px;
+      padding: 0px 10px;
+      @media screen and(max-width: 576px) {
+        width: 100%;
+        margin: 20px 30px;
+      }
+    }
+  }
+
+
+  .MainFooter__row1 {
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px 0;
+
+    @media screen and(max-width: 1100px) {
+      flex-wrap: wrap;
+    }
+
+    .MainFooter__Logo {
+      .MainFooter__LogoText {
+        color: #ffffff;
+        width: 230px;
+        font-family: 'SFProDisplay-Semibold', serif;
+        font-size: 32px;
+        line-height: 38px;
+
+        @media screen and(max-width: 576px) {
+          font-size: 20px;
+          line-height: 24px;
+          margin: 20px 30px;
+        }
+      }
+
+    }
+
+    .MainFooter__callButton {
+      .ButtonComponent {
+        background-color: transparent;
+        font-family: 'TTNorms-Bold', serif;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        border: #ffffff 2px solid !important;
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+        border: 2px;
+
+        padding: 0;
+        width: 200px;
+      }
+      @media screen and(max-width: 576px) {
+
+        margin: 20px 30px;
+      }
+    }
+
+  }
+
+  .MainFooter__row2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px 0;
+    color: #ffffff;
+    font-size: 18px;
+
+
+    .MainFooter__politics{
+      order: 1;
+      @media screen and(max-width: 576px) {
+        order: 2;
+        margin: 20px 30px;
+        width:100%;
+      }
+    }
+
+    .MainFooter__socialBlock{
+      display: flex;
+      order: 2;
+      @media screen and(max-width: 576px) {
+        order: 1;
+        margin: 20px 30px;
+        width:100%;
+      }
+    }
+
+    .MainFooter__copyright {
+      order: 3;
+      @media screen and(max-width: 576px) {
+        order: 3;
+        margin: 20px 30px;
+        width:100%;
+      }
+    }
+
+    img{
+      padding: 0 11px;
+    }
+  }
 }
