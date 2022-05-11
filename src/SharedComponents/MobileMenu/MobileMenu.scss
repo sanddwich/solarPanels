@@ -47,6 +47,10 @@
     }
   }
 
+  ul li::before {
+    content: none;
+  }
+
   .MobileMenu__menuBlock {
     padding-top: 30px !important;
     ul {
@@ -58,6 +62,10 @@
 
       li {
         padding-bottom: 30px;
+
+        ::before {
+          font-size: 0;
+        }
       }
     }
   }

@@ -1,0 +1,74 @@
+.Block2Card {
+  .Block2Card__title {
+    position: relative;
+    margin-top: -160px;
+
+    h2 {
+      padding-left: 40px;
+      padding-right: 40px;
+      color: #ffffff;
+      font-size: 48px;
+      line-height: 57px;
+
+      @media screen and(max-width: 1200px) {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 42px;
+        line-height: 50px;
+      }
+
+      @media screen and(max-width: 576px) {
+        font-size: 30px;
+        line-height: 34px;
+      }
+
+      @media screen and(max-width: 400px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    @media screen and(max-width: 1200px) {
+      margin-top: -120px;
+    }
+
+    @media screen and(max-width: 400px) {
+      margin-top: -60px;
+    }
+  }
+
+  .Block2Card__subtitles {
+    padding-top: 20px;
+
+    @media screen and(max-width: 400px) {
+      padding-top: 0;
+    }
+  }
+
+  .Block2Card__subtitle {
+    padding-top: 20px;
+
+    .Block2Card__subtitleIcon {
+      padding-right: 15px;
+    }
+
+    .Block2Card__subtitleText {
+      width: 100%;
+      font-family: 'TTNorms-Regular';
+
+      padding-right: 20px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media screen and(max-width: 400px) {
+      .Block2Card__subtitleText {
+        padding-right: 0px;
+      }
+    }
+  }
+
+  @media screen and(max-width: 400px) {
+    padding-bottom: 20px !important;
+  }
+}
