@@ -1,7 +1,9 @@
 import CardInterface from '../Interfaces/CardInterface'
+import SubtitleInterface from '../Interfaces/SubtitleInterface'
 
 interface ConfigInterface {
   cardList: CardInterface[]
+  miniCardList: CardInterface[]
 }
 
 export const Config: ConfigInterface = {
@@ -36,6 +38,47 @@ export const Config: ConfigInterface = {
         {
           icon: '/img/circle_moln.svg',
           text: 'Обеспечивает бесперебойным электроснабжением в момент аварийного отключения',
+        },
+      ],
+    },
+  ],
+  miniCardList: [
+    {
+      img: null,
+      imgMob: null,
+      title: null,
+      subtitles: [{ icon: '/img/check.svg', text: 'Гарантия от 10 лет' }],
+    },
+    {
+      img: null,
+      imgMob: null,
+      title: null,
+      subtitles: [
+        {
+          icon: '/img/purse.svg',
+          text: 'Окупаемость от 3 лет',
+        },
+      ],
+    },
+    {
+      img: null,
+      imgMob: null,
+      title: null,
+      subtitles: [
+        {
+          icon: '/img/rem.svg',
+          text: 'Производим монтаж под ключ',
+        },
+      ],
+    },
+    {
+      img: null,
+      imgMob: null,
+      title: null,
+      subtitles: [
+        {
+          icon: '/img/messager.svg',
+          text: 'На связи 24/7 с нашими клиентами',
         },
       ],
     },

@@ -18,8 +18,8 @@ class Main extends React.Component<MainProps, MainState> {
         <Block1 />
         <Block2 />
         <Block3 />
-        <Block6 /> 
-        <Block7 />
+        {/* <Block6 /> 
+        <Block7 /> */}
       </Container>
     )
   }

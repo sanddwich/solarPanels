@@ -1,8 +1,8 @@
 import SubtitleInterface from "./SubtitleInterface";
 
 export default interface CardInterface {
-  img: string,
-  imgMob: string,
-  title: string,
+  img: string | null,
+  imgMob: string | null,
+  title: string | null,
   subtitles: SubtitleInterface[]
 }
