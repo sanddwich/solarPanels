@@ -1,0 +1,26 @@
+.Card4 {
+  padding: 40px;
+  background-color: #1dacd6;
+  border-radius: 8px;
+
+  font-family: 'SFProDisplay-Medium';
+  color: #ffffff;
+
+  .Card4__num {
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 30px;
+  }
+
+  .Card4__title {
+    font-size: 48px;
+    line-height: 57px;
+    padding-bottom: 30px;
+  }
+
+  .Card4__subtitle {
+    font-family: "TTNorms-Medium";
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

@@ -1,9 +1,10 @@
+import Card4Inteface from '../Interfaces/Card4Inteface'
 import CardInterface from '../Interfaces/CardInterface'
-import SubtitleInterface from '../Interfaces/SubtitleInterface'
 
 interface ConfigInterface {
   cardList: CardInterface[]
   miniCardList: CardInterface[]
+  card4List: Card4Inteface[]
 }
 
 export const Config: ConfigInterface = {
@@ -83,4 +84,11 @@ export const Config: ConfigInterface = {
       ],
     },
   ],
+  card4List: [
+    {num: "01", title: "Консультация", subtitle: "Определяем задачи под особенности объекта"},
+    {num: "02", title: "Создание проекта", subtitle: "Производим расчет и разрабатываем систему"},
+    {num: "03", title: "Договор", subtitle: "Готовим договор и счет на оплату"},
+    {num: "04", title: "Монтаж", subtitle: "Поставляем оборудование, устанавливаем и запускаем систему"},
+    {num: "05", title: "Сервисное обслуживание", subtitle: "Профилактика и гарантийное обслуживание"},
+  ]
 }
