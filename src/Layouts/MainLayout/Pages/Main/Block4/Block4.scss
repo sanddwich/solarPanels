@@ -3,18 +3,62 @@
   padding-top: 150px;
   padding-bottom: 150px;
 
-  .Block4__title {
-    font-family: 'SFProDisplay-Medium';
-    font-size: 64px;
-    line-height: 76px;
-    color: #202020;
+  @media screen and(max-width:768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  .Block4__Row1 {
-    margin: 0;
+  .Block4__card {
+    width: 100%;
+    padding: 0px;
+    // padding-bottom: 40px;
+    h3 {
+      font-family: 'SFProDisplay-Medium';
+      font-size: 64px;
+      line-height: 76px;
+      color: #202020;
 
-    .Block4__card {
-      padding: 0px;
+      @media screen and(max-width:992px) {
+        font-size: 46px;
+        line-height: 54px;
+      }
+
+      @media screen and(max-width:576px) {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+  }
+
+  .Block4__ContMob {
+    padding: 30px;
+  }
+
+  .Block4__horLine {
+    width: 50px;
+
+    .Block4__horLineUp {
+      height: 50%;
+      border-bottom: #1dacd6 1px solid;
+    }
+
+    .none {
+      border-bottom: none !important;
+    }
+  }
+
+  .Block4__RowLine {
+    display: flex;
+    justify-content: center;
+
+    .Block4__Up {
+      height: 30px;
+      border-right: #1dacd6 1px solid;
+      border-bottom: #1dacd6 1px solid;
+    }
+    .Block4__Down {
+      height: 30px;
+      border-left: #1dacd6 1px solid;
     }
   }
 }

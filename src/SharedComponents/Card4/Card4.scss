@@ -16,11 +16,33 @@
     font-size: 48px;
     line-height: 57px;
     padding-bottom: 30px;
+
+    @media screen and(max-width:992px) {
+      font-size: 34px;
+      line-height: 42px;
+    }
   }
 
   .Card4__subtitle {
-    font-family: "TTNorms-Medium";
+    font-family: 'TTNorms-Medium';
     font-size: 20px;
     line-height: 24px;
+  }
+
+  @media screen and(max-width:576px) {
+    
+    .Card4__num {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .Card4__title {
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 20px;
+    }
+    .Card4__subtitle {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 }

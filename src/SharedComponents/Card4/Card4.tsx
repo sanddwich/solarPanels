@@ -13,7 +13,7 @@ const Card4 = (props: Card4Props) => {
       <Row className="Card4__num m-0">{props.card.num}</Row>
       <Row className="Card4__title m-0">{props.card.title}</Row>
       <Row className="Card4__subtitle m-0">
-        <Col xs={12} md={8} className="Card4__Col p-0">{props.card.subtitle}</Col>
+        <Col xs={12} xl={8} className="Card4__Col p-0">{props.card.subtitle}</Col>
       </Row>
     </Container>
   )
