@@ -7,17 +7,15 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 200;
 
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', serif;
   font-style: normal;
   line-height: 180%;
 
   .ModalWindow__container {
-    position: fixed;
-    top: 50px;
-    bottom: 50px;
-    left: 50px;
-    right: 50px;
-    background-color: #ffffff;
+    margin: 2% auto;
+    background-color: #FFF1C1;
+    width: 420px;
+    height: 90%;
   }
 
   .ModalWindow__header {
@@ -33,7 +31,9 @@
 
   .ModalWindow__body {
     padding: 30px;
-    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     height: 90%;
     overflow-y: scroll;
 
@@ -47,6 +47,22 @@
     &::-webkit-scrollbar-thumb {
       background-color: #0068a5;
     }
+
+      .ButtonComponent {
+        font-family: 'TTNorms-Bold', serif;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 280px;
+        height: 70px;
+
+      }
+
   }
 
   .ModalWindow__close {

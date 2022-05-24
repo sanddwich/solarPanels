@@ -2,12 +2,13 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import './MainFooter.scss'
 import ButtonComponent from "../../../SharedComponents/ButtonComponent/ButtonComponent";
-import {setMobileMenuModal} from "../../../Redux/actions/modal";
+import {setMobileMenuModal, showRequestModal} from "../../../Redux/actions/modal";
 import {RootState} from "../../../Redux";
 import {connect} from "react-redux";
 
 interface MainFooterProps {
     setMobileMenuModal: (isActive: boolean) => void
+    showRequestModal: () => void
 }
 
 const MainFooter = (props: MainFooterProps) => {
@@ -29,7 +30,7 @@ const MainFooter = (props: MainFooterProps) => {
                   </div>
 
                   <div className="MainFooter__callButton">
-                      <ButtonComponent onClick={() => {console.log(1111)}}>Заказать звонок</ButtonComponent>
+                      <ButtonComponent onClick={props.showRequestModal}>Заказать звонок</ButtonComponent>
                   </div>
 
               </div>
@@ -47,16 +48,12 @@ const MainFooter = (props: MainFooterProps) => {
 
               </div>
           </Container>
-
-
-
-
       </Container>
     )
 }
 
 const mapDispatchToProps = {
-    setMobileMenuModal,
+    setMobileMenuModal, showRequestModal
 }
 
 const mapStateToProps = (state: RootState) => {

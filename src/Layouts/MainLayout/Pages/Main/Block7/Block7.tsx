@@ -4,14 +4,7 @@ import ButtonComponent from '../../../../../SharedComponents/ButtonComponent/But
 import './Block7.scss'
 import {Swiper, SwiperSlide} from 'swiper/react';
 
-interface Block7Props {
-}
-
-const Block7 = (props: Block7Props) => {
-    const onClick = () => {
-        console.log('onClick')
-    }
-
+const Block7 = () => {
     return (
         <Container fluid className="Block7 ">
             <Container>
@@ -24,12 +17,12 @@ const Block7 = (props: Block7Props) => {
                         <div className="Block7__swiper-slide">
                             <div className="slide-header">
                                 <h3>Название проекта</h3>
-                                <div className="swiper-pagination"></div>
+                                <div className="swiper-pagination"/>
                             </div>
 
                             <div className="d-flex">
                                 <div className="slide-image">
-                                    <img src="/img/solar-panels-house-roof-3d-illustration 3.jpg" alt=""/>
+                                    <img className={"img-fluid"} src={"/img/solar-panels-house-roof-3d-illustration 3.jpg"} alt=""/>
                                 </div>
                                 <div className="slide-text">
                                     <h4>Прочитайте отзыв от Николая Семенова:</h4>

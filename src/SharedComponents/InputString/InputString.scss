@@ -1,16 +1,16 @@
 .InputString {
-  padding: 0px;
- 
-  .form-label {
-    font-size: 26px;
-    font-weight: 600;
-  }
+  padding: 0;
+  font-family: 'TTNorms-Medium', serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
 
   .form-control {
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 0;
-    border-color: #212529;
+    font-size: 16px;
+    height: 75px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #787878;
   }
 
   @media screen and(max-width: 576px) {
