@@ -62,7 +62,7 @@
       letter-spacing: 0.1em;
       font-size: 14px;
     }
-    
+
     @media screen and(max-width: 576px) {
       text-align: left;
     }
@@ -75,7 +75,7 @@
       padding-top: 40px;
     }
   }
-  
+
   .Block1__burger {
     padding-right: 20px;
   }
@@ -122,6 +122,14 @@
       padding: 0;
       width: 200px;
     }
+
+    .hvr-sweep-to-right:before {
+      // border: rgba(255, 255, 255, 0.1) 2px solid !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      border-radius: 8px !important;
+      margin-left: -1px;
+      margin-top: -1px;
+    }
   }
 
   .ButtonComponent {
@@ -148,7 +156,7 @@
   }
   @media screen and(max-width: 640px) {
     min-height: 360px;
-  }  
+  }
   @media screen and(max-width: 576px) {
     min-height: 600px;
   }

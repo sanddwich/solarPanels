@@ -8,7 +8,7 @@ interface ButtonComponentProps {
 
 const ButtonComponent = (props: ButtonComponentProps) => {
   return (
-    <div className="ButtonComponent" onClick={props.onClick}>
+    <div className="ButtonComponent hvr-sweep-to-right" onClick={props.onClick}>
       {props.children}
     </div>
   )
