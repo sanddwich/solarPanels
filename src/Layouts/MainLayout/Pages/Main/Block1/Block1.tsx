@@ -5,6 +5,8 @@ import { RootState } from '../../../../../Redux'
 import { setMobileMenuModal } from '../../../../../Redux/actions/modal'
 import ButtonComponent from '../../../../../SharedComponents/ButtonComponent/ButtonComponent'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import { scroller } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
 import './Block1.scss'
 
 interface Block1Props {
@@ -14,6 +16,14 @@ interface Block1Props {
 const Block1 = (props: Block1Props) => {
   const callOrder = () => {
     console.log('callOrder')
+  }
+
+  const scrollTo = (ankorName: string, offset: number): void => {
+    scroller.scrollTo(ankorName, {
+      duration: 1500,
+      delay: 100,
+      offset,
+    })
   }
 
   return (
@@ -29,27 +39,39 @@ const Block1 = (props: Block1Props) => {
     >
       <Container className="Block1__block">
         <div className="Block1__Row1 d-flex justify-content-between align-items-baseline">
-          <div className="Block1__Logo">
+          <div className="Block1__Logo hvr-grow">
             <AnimationOnScroll animateOnce={true} offset={0} delay={1500} animateIn="animate__fadeIn">
-              <div className="Block1__LogoText">New Generation</div>
-              <div className="Block1__LogoLine"></div>
+              <NavLink to={'/'}>
+                <div className="Block1__LogoText">New Generation</div>
+                <div className="Block1__LogoLine"></div>
+              </NavLink>
             </AnimationOnScroll>
           </div>
           <div className="Block1__navigation d-none d-lg-flex flex-wrap justify-content-center">
             <AnimationOnScroll animateOnce={true} offset={0} animateIn="animate__fadeInRight">
-              <div className="Block1__navigationEl">Типы систем</div>
+              <div className="Block1__navigationEl hvr-underline-from-left" onClick={() => scrollTo('Block2', 0)}>
+                Типы систем
+              </div>
             </AnimationOnScroll>
             <AnimationOnScroll animateOnce={true} offset={0} delay={200} animateIn="animate__fadeInRight">
-              <div className="Block1__navigationEl">Этапы</div>
+              <div className="Block1__navigationEl hvr-underline-from-left" onClick={() => scrollTo('Block4', 0)}>
+                Этапы
+              </div>
             </AnimationOnScroll>
             <AnimationOnScroll animateOnce={true} offset={0} delay={400} animateIn="animate__fadeInRight">
-              <div className="Block1__navigationEl">Выполненые проекты</div>
+              <div className="Block1__navigationEl hvr-underline-from-left" onClick={() => scrollTo('Block6', 0)}>
+                Выполненые проекты
+              </div>
             </AnimationOnScroll>
             <AnimationOnScroll animateOnce={true} offset={0} delay={600} animateIn="animate__fadeInRight">
-              <div className="Block1__navigationEl">Отзывы</div>
+              <div className="Block1__navigationEl hvr-underline-from-left" onClick={() => scrollTo('Block7', 0)}>
+                Отзывы
+              </div>
             </AnimationOnScroll>
             <AnimationOnScroll animateOnce={true} offset={0} delay={800} animateIn="animate__fadeInRight">
-              <div className="Block1__navigationEl">Контакты</div>
+              <div className="Block1__navigationEl hvr-underline-from-left" onClick={() => scrollTo('Block8', 0)}>
+                Контакты
+              </div>
             </AnimationOnScroll>
           </div>
           <div className="Block1__callButton d-none d-sm-block">

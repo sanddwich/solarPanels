@@ -1,4 +1,5 @@
 import React from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Config } from '../../../../../Config/Config'
 import Block2Card from '../../../../../SharedComponents/Block2Card/Block2Card'
@@ -21,7 +22,9 @@ const Block2 = (props: Block2Props) => {
           {Config.cardList.map((card, index) => {
             return (
               <Col md={6} lg={4} className="Block2__cardCol" key={index}>
-                <Block2Card card={card} />
+                <AnimationOnScroll animateOnce={true} offset={200} delay={index * 200} animateIn="animate__fadeInUp">
+                  <Block2Card card={card} />
+                </AnimationOnScroll>
               </Col>
             )
           })}

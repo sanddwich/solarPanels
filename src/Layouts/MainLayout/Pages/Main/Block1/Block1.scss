@@ -6,11 +6,17 @@
   .Block1__navigation {
     width: 100%;
 
+    .hvr-underline-from-left:before {
+      background: #ffffff;
+      height: 2px;
+    }
+
     .Block1__navigationEl {
       font-family: 'TTNorms-Medium';
       font-size: 18px;
       line-height: 21px;
       padding: 20px;
+      cursor: pointer;
     }
   }
 
@@ -81,6 +87,12 @@
   }
 
   .Block1__Logo {
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
     .Block1__LogoText {
       width: 230px;
       font-family: 'SFProDisplay-Semibold';

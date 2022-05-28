@@ -1,7 +1,13 @@
 .Block2Card {
+  overflow: hidden;
+
   .Block2Card__title {
     position: relative;
     margin-top: -160px;
+
+    .Block2Card__img {
+      
+    }
 
     h2 {
       padding-left: 40px;

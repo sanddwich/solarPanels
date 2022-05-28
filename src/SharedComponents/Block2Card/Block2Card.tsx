@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import CardInterface from '../../Interfaces/CardInterface'
-import SubtitleInterface from '../../Interfaces/SubtitleInterface'
 import './Block2Card.scss'
 
 interface Block2CardProps {
@@ -14,16 +13,16 @@ const Block2Card = (props: Block2CardProps) => {
   }
 
   return (
-    <Container fluid className="Block2Card p-0">
+    <Container fluid className="Block2Card p-0" >
       {!!props.card.img && !!props.card.imgMob && (
         <Row className="Block2Card__img">
           <img
-            className="img-fluid d-none d-sm-block"
+            className="img-fluid d-none d-sm-block hvr-grow"
             src={props.card.img}
             alt={!!props.card.title ? props.card.title : ''}
           />
           <img
-            className="img-fluid d-block d-sm-none"
+            className="img-fluid d-block d-sm-none hvr-grow"
             src={props.card.imgMob}
             alt={!!props.card.title ? props.card.title : ''}
           />

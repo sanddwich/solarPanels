@@ -1,4 +1,5 @@
 import React from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Config } from '../../../../../Config/Config'
 import Card4 from '../../../../../SharedComponents/Card4/Card4'
@@ -11,9 +12,11 @@ const Block4 = (props: Block4Props) => {
     <Container fluid className="Block4">
       <Container className="Block4__Cont d-none d-md-block">
         <div className="Block4__Row d-flex align-items-center">
-          <div className="Block4__card">
-            <h3>Ответственный подход на каждом этапе</h3>
-          </div>
+          <AnimationOnScroll animateOnce={true} offset={100} delay={100} animateIn="animate__slideInLeft">
+            <div className="Block4__card">
+              <h3>Ответственный подход на каждом этапе</h3>
+            </div>
+          </AnimationOnScroll>
           <div className="Block4__horLine">
             <div className="Block4__horLineUp none"></div>
             <div className="Block4__horLineDown"></div>
@@ -63,7 +66,7 @@ const Block4 = (props: Block4Props) => {
       </Container>
 
       <Container className="Block4__ContMob d-block d-md-none">
-        <div className="Block4__card" style={{paddingBottom: 40}}>
+        <div className="Block4__card" style={{ paddingBottom: 40 }}>
           <h3>Ответственный подход на каждом этапе</h3>
         </div>
 
@@ -71,7 +74,7 @@ const Block4 = (props: Block4Props) => {
           return (
             <React.Fragment key={index}>
               <Card4 card={card} />
-              {index != Config.card4List.length - 1  && (
+              {index != Config.card4List.length - 1 && (
                 <Row className="Block4__RowLine">
                   <Col xs={10} sm={6}>
                     <div className="Block4__Up"></div>

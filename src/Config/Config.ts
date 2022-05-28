@@ -2,12 +2,14 @@ import Card4Inteface from '../Interfaces/Card4Inteface'
 import CardInterface from '../Interfaces/CardInterface'
 
 interface ConfigInterface {
+  url: string
   cardList: CardInterface[]
   miniCardList: CardInterface[]
   card4List: Card4Inteface[]
 }
 
 export const Config: ConfigInterface = {
+  url: 'http://localhost:3000/',
   cardList: [
     {
       img: '/img/card1.jpg',

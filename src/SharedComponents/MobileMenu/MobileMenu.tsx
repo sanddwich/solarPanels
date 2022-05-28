@@ -49,7 +49,6 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
     scroller.scrollTo(ankorName, {
       duration: 1500,
       delay: 100,
-      smooth: true,
       offset,
     })
 
@@ -80,11 +79,11 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
         <Row className="MobileMenu__twoRow m-0">
           <Col className="MobileMenu__menuBlock p-2">
             <ul>
-              <li id="MobileMenu__listEl" onClick={() => this.scrollTo('Block3', 0)}>Типы систем</li>
-              <li onClick={() => this.scrollTo('Block5', 0)}>Этапы</li>
-              <li onClick={() => this.scrollTo('Rating', 0)}>Выполненые проекты</li>
-              <li onClick={() => this.scrollTo('Consulting', 0)}>Отзывы</li>
-              <li onClick={() => this.scrollTo('Services', 0)}>Контакты</li>
+              <li id="MobileMenu__listEl" onClick={() => this.scrollTo('Block2', 0)}>Типы систем</li>
+              <li onClick={() => this.scrollTo('Block4', 0)}>Этапы</li>
+              <li onClick={() => this.scrollTo('Block6', 0)}>Выполненые проекты</li>
+              <li onClick={() => this.scrollTo('Block7', 0)}>Отзывы</li>
+              <li onClick={() => this.scrollTo('Block8', 0)}>Контакты</li>
             </ul>
           </Col>
         </Row>
