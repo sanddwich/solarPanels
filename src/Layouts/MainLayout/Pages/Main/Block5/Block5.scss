@@ -76,6 +76,7 @@
     padding-top: 50px;
 
     .ButtonComponent {
+      width: 100%;
       text-align: center;
     }
 
@@ -86,6 +87,18 @@
         font-size: 16px;
         line-height: 19px;
       }
+    }
+  }
+
+  .Block5__errorLine {
+    // font-family: "TTNorms-Light";
+    font-size: 14px;
+    color: #ffcbcb;
+  }
+
+  .LoaderHorizontal {
+    .lds-ellipsis div {
+      background: #ffffff;
     }
   }
 
@@ -111,6 +124,13 @@
         .Block5__buttonImg {
           padding-left: 20px;
         }
+      }
+    }
+
+    .hvr-sweep-to-right {
+      &::before {
+        border-radius: 8px !important;
+        background: rgba(0, 0, 0, 0.1);
       }
     }
 

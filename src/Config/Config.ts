@@ -1,15 +1,30 @@
 import Card4Inteface from '../Interfaces/Card4Inteface'
 import CardInterface from '../Interfaces/CardInterface'
+import MailSettingsInterface from '../Interfaces/MailSettingsInterface'
 
 interface ConfigInterface {
   url: string
+  mailSettings: MailSettingsInterface
   cardList: CardInterface[]
   miniCardList: CardInterface[]
   card4List: Card4Inteface[]
 }
 
 export const Config: ConfigInterface = {
-  url: 'http://localhost:3000/',
+  // url: 'http://localhost:3000/',
+  url: 'https://newg30.ru/',
+  mailSettings: {
+    apiPath: '/api/index.php',
+    senderMail: 'info@newg30.ru',
+    senderMailInfo: 'newg30 Info',
+    senderMailServer: 'ssl://mail.hostland.ru',
+    userName: '',
+    userPhone: '',
+    userEmail: '',
+    recipientMail: 'bck-dkiselev@yandex.ru',
+    userComment: ''
+    // recipientMail: 'airmix_pods@mail.ru',
+  },
   cardList: [
     {
       img: '/img/card1.jpg',
@@ -87,10 +102,10 @@ export const Config: ConfigInterface = {
     },
   ],
   card4List: [
-    {num: "01", title: "Консультация", subtitle: "Определяем задачи под особенности объекта"},
-    {num: "02", title: "Создание проекта", subtitle: "Производим расчет и разрабатываем систему"},
-    {num: "03", title: "Договор", subtitle: "Готовим договор и счет на оплату"},
-    {num: "04", title: "Монтаж", subtitle: "Поставляем оборудование, устанавливаем и запускаем систему"},
-    {num: "05", title: "Сервисное обслуживание", subtitle: "Профилактика и гарантийное обслуживание"},
-  ]
+    { num: '01', title: 'Консультация', subtitle: 'Определяем задачи под особенности объекта' },
+    { num: '02', title: 'Создание проекта', subtitle: 'Производим расчет и разрабатываем систему' },
+    { num: '03', title: 'Договор', subtitle: 'Готовим договор и счет на оплату' },
+    { num: '04', title: 'Монтаж', subtitle: 'Поставляем оборудование, устанавливаем и запускаем систему' },
+    { num: '05', title: 'Сервисное обслуживание', subtitle: 'Профилактика и гарантийное обслуживание' },
+  ],
 }

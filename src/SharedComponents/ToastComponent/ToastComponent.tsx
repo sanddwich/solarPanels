@@ -6,6 +6,7 @@ import { hideToast } from '../../Redux/actions/toast'
 import { ToastState } from '../../Redux/interfaces/interfaces'
 import * as Icon from 'react-bootstrap-icons'
 import './ToastComponent.scss'
+import OutsideClickHandler from 'react-outside-click-handler'
 
 interface ToastComponentProps {
   hideToast: () => void
@@ -20,21 +21,25 @@ class ToastComponent extends React.Component<ToastComponentProps, ToastComponent
     return (
       <React.Fragment>
         {this.props.toast.isActive ? (
-          <Container fluid className="ToastComponent">
-            <Toast
-              className={`ToastComponent__sendRequestMessage animated animate__backInDown ${
-                this.props.toast.error ? 'errorMessage' : 'successMessage'
-              }`}
-              show={this.props.toast.isActive}
-            >
-              <Row className="m-0 d-flex justify-content-end">
-                <div className="ToastComponent__sendRequestMessageCloseBtn" onClick={() => this.props.hideToast()}>
-                  <Icon.XSquare width={30} height={30} fill={`#f8f9fa`} />
-                </div>
-              </Row>
-              <Row className="m-0 ToastComponent__sendRequestMessageMsg">{this.props.toast.message}</Row>
-            </Toast>
-          </Container>
+          <OutsideClickHandler
+            onOutsideClick={() => this.props.hideToast()}
+          >
+            <Container fluid className="ToastComponent">
+              <Toast
+                className={`ToastComponent__sendRequestMessage animated animate__backInDown ${
+                  this.props.toast.error ? 'errorMessage' : 'successMessage'
+                }`}
+                show={this.props.toast.isActive}
+              >
+                <Row className="m-0 d-flex justify-content-end">
+                  <div className="ToastComponent__sendRequestMessageCloseBtn" onClick={() => this.props.hideToast()}>
+                    <Icon.XSquare width={30} height={30} fill={`#f8f9fa`} />
+                  </div>
+                </Row>
+                <Row className="m-0 ToastComponent__sendRequestMessageMsg">{this.props.toast.message}</Row>
+              </Toast>
+            </Container>
+          </OutsideClickHandler>
         ) : null}
       </React.Fragment>
     )
