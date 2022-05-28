@@ -40,6 +40,7 @@ const Block5 = (props: Block5Props) => {
       userPhone: data.phoneNumber,
       siteUrl: Config.url,
       userEmail: data.email,
+      userComment: data.comment,
     }
 
     axios
@@ -156,10 +157,10 @@ const Block5 = (props: Block5Props) => {
               <div className="Block5__inputCont">
                 <input
                   type="text"
-                  name="comment"
                   className="Block5__input"
                   aria-label="Комментарий"
                   placeholder="Комментарий"
+                  {...register('comment', {})}
                 />
               </div>
             </AnimationOnScroll>
