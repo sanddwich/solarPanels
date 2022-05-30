@@ -112,6 +112,7 @@
 
       .Block5__buttonCont {
         .Block5__buttonTitle {
+          font-family: "TTNorms-Medium";
           font-size: 20px;
           line-height: 24px;
           color: #202020;
@@ -151,6 +152,12 @@
     }
   }
 
+  .Block5__miniTitle {
+    font-family: 'SFProDisplay-Bold';
+    font-size: 24px;
+    line-height: 29px;
+  }
+
   @media screen and(max-width: 576px) {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -170,7 +177,6 @@
     }
 
     .Block5__miniTitle {
-      font-family: 'SFProDisplay-Bold';
       font-size: 20px;
       line-height: 24px;
       padding-top: 20px;

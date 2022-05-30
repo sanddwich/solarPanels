@@ -27,6 +27,11 @@ const Block5 = (props: Block5Props) => {
     formState: { errors },
   } = useForm<FormDataInterface>({})
 
+  
+  const whatsappChat = () => {
+    window.open(Config.whatsapp, "_blank")
+  }
+
   const showToast = (error: boolean, message: string): void => {
     error ? props.setErrorToast(message) : props.setSuccessToast(message)
   }
@@ -79,7 +84,7 @@ const Block5 = (props: Block5Props) => {
               <p>Заполните форму обратной связи, и с вами свяжутся в течение 15 минут</p>
               <p className="Block5__miniTitle">Остались вопросы?</p>
               <div className="Block5__button d-none d-md-block">
-                <ButtonComponent onClick={() => showToast(false, 'Переход на whatsapp!')}>
+                <ButtonComponent onClick={whatsappChat}>
                   <div className="Block5__buttonCont d-flex justify-content-between align-items-baseline">
                     <div className="Block5__buttonTitle">Либо напишите ваш вопрос на WhatsApp</div>
                     <div className="Block5__buttonImg">
@@ -180,7 +185,7 @@ const Block5 = (props: Block5Props) => {
             </AnimationOnScroll>
 
             <div className="Block5__button d-block d-md-none">
-              <ButtonComponent onClick={() => showToast(false, 'Переход на whatsapp!')}>
+              <ButtonComponent onClick={whatsappChat}>
                 <div className="Block5__buttonCont d-flex justify-content-between align-items-baseline">
                   <div className="Block5__buttonTitle">Либо напишите ваш вопрос на WhatsApp</div>
                   <div className="Block5__buttonImg">

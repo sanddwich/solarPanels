@@ -8,11 +8,17 @@ interface ConfigInterface {
   cardList: CardInterface[]
   miniCardList: CardInterface[]
   card4List: Card4Inteface[]
+  phoneNumber: string
+  telegram: string
+  whatsapp: string
 }
 
 export const Config: ConfigInterface = {
   // url: 'http://localhost:3000/',
-  url: 'https://newg30.ru/',
+  url: 'https://newg30.ru/',  
+  phoneNumber: "tel:89377596269",
+  telegram: "https://t.me/+79377596269",
+  whatsapp: "https://api.whatsapp.com/send?phone=+79377596269",
   mailSettings: {
     apiPath: '/api/index.php',
     senderMail: 'info@newg30.ru',

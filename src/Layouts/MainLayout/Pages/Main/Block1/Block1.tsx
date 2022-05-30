@@ -8,14 +8,15 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { scroller } from 'react-scroll'
 import { NavLink } from 'react-router-dom'
 import './Block1.scss'
+import { Config } from '../../../../../Config/Config'
 
 interface Block1Props {
   setMobileMenuModal: (isActive: boolean) => void
 }
 
 const Block1 = (props: Block1Props) => {
-  const callOrder = () => {
-    console.log('callOrder')
+  const whatsappChat = () => {
+    window.open(Config.phoneNumber, "_blank")
   }
 
   const scrollTo = (ankorName: string, offset: number): void => {
@@ -75,7 +76,7 @@ const Block1 = (props: Block1Props) => {
             </AnimationOnScroll>
           </div>
           <div className="Block1__callButton d-none d-sm-block">
-            <ButtonComponent onClick={callOrder}>
+            <ButtonComponent onClick={whatsappChat}>
               <div>Заказать звонок</div>
             </ButtonComponent>
           </div>
@@ -94,7 +95,7 @@ const Block1 = (props: Block1Props) => {
           <div className="Block1__subtitle">Шагни в будущее вместе с нами</div>
 
           <div className="Block1__buttonCont d-flex justify-content-start justify-content-sm-center">
-            <ButtonComponent onClick={callOrder}>Связаться</ButtonComponent>
+            <ButtonComponent onClick={whatsappChat}>Связаться</ButtonComponent>
           </div>
         </AnimationOnScroll>
       </Container>

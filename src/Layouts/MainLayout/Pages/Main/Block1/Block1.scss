@@ -148,9 +148,7 @@
     // background-color: aquamarine;
   }
 
-  @media screen and(max-width: 2048px) {
-    min-height: 1052px;
-  }
+  min-height: 1052px;
   @media screen and(max-width: 1920px) {
     min-height: 980px;
   }

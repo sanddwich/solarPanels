@@ -12,7 +12,8 @@ const Block3 = (props: Block3Props) => {
       fluid
       className="Block3"
       style={{
-        background: `url(/img/3-1.jpg)`,
+        // background: 'url(/img/3-1.jpg)',
+        background: 'url(/img/3-1_origin.jpg)',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',

@@ -28,6 +28,10 @@
         line-height: 29px;
       }
     }
+
+    @media screen and(max-width:576px) {
+      padding-bottom: 50px;
+    }
   }
 
   .Block4__ContMob {
@@ -43,7 +47,7 @@
     }
 
     .none {
-      border-bottom: none !important;
+      border-bottom: #ffffff 1px solid !important;
     }
   }
 
