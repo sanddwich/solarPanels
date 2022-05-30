@@ -5,8 +5,8 @@ import './InputMasked.scss'
 
 interface InputMaskedProps {
     type: 'email' | 'number' | 'password' | 'text' | 'price' | 'phone'
-    value: number
-    controlChangeHandler: (name: string, value: string) => void
+    value: string
+    controlChangeHandler: (value: string) => void
 }
 
 interface maskOptions {
@@ -19,8 +19,15 @@ interface maskOptions {
 }
 
 const InputMasked = (props: InputMaskedProps) => {
+    const [curValue, setCureValue] = useState(props.value)
+    const changeHandler = (val: string): void => {
+        props.controlChangeHandler(val)
+        setCureValue(val)
+    }
+
     const [inputMaskVariants] = useState<Array<maskOptions>>([
         {
+
             type: 'phone',
             mask: '+7(999)999-99-99',
             maskChar: '_',
@@ -47,7 +54,14 @@ const InputMasked = (props: InputMaskedProps) => {
     return (
         <Container fluid className="InputMasked p-0">
             <Form.Group>
-                <ReactInputMask placeholder={"+7(999)999-99-99"} className={"form-control"} mask={getMask()} />
+                <ReactInputMask
+                    value={curValue}
+                    placeholder={"+7(___)___-__-__"}
+                    className={"form-control"}
+                    onChange={(event) => {
+                        changeHandler(event.target.value)
+                    }}
+                    mask={getMask()} />
             </Form.Group>
         </Container>
     )

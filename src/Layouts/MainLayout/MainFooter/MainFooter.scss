@@ -2,7 +2,13 @@
   display: flex;
   background-color: #3C3C3C;
   width: 100%;
+  padding-top:50px;
   font-family: 'TTNorms-Medium', serif;
+  .hvr-underline-from-left:before {
+    background: #ffffff;
+    height: 2px;
+  }
+
 
   .MainFooter__navigation {
     align-content: center;
@@ -10,6 +16,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    line-height: 41px;
+    cursor: pointer;
 
     .MainFooter__navigationEl {
       color: #ffffff;
@@ -24,6 +32,9 @@
 
 
   .MainFooter__row1 {
+    a{
+      text-decoration: none   ;
+    }
     width: 100%;
     display: flex;
 
@@ -36,8 +47,10 @@
     }
 
     .MainFooter__Logo {
+
       .MainFooter__LogoText {
         color: #ffffff;
+
         width: 230px;
         font-family: 'SFProDisplay-Semibold', serif;
         font-size: 32px;
@@ -56,7 +69,7 @@
       .ButtonComponent {
         background-color: transparent;
         font-family: 'TTNorms-Bold', serif;
-        font-size: 14px;
+        font-size: 13px;
         line-height: 17px;
         letter-spacing: 0.05em;
         text-transform: uppercase;
@@ -65,7 +78,7 @@
         border: #ffffff 2px solid !important;
         padding-top: 14px !important;
         padding-bottom: 14px !important;
-        width: 200px;
+        width: 250px;
       }
       @media screen and(max-width: 576px) {
 
@@ -84,6 +97,9 @@
     margin: 80px 0;
     color: #ffffff;
     font-size: 18px;
+    img{
+      cursor: pointer;
+    }
 
 
     .MainFooter__politics{
@@ -118,4 +134,8 @@
       padding: 0 11px;
     }
   }
+  @media screen and(max-width: 1199px) {
+    padding-top: 100px;
+  }
+
 }

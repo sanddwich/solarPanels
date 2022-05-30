@@ -41,11 +41,12 @@
     "react-scroll": "^1.8.6",
     "react-select-search": "^3.0.9",
     "react-snap": "^1.13.1",
+    "react-yandex-maps": "^4.5.0",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
     "sass": "^1.49.9",
-    "swiper": "^8.0.7",
+    "swiper": "^6.3.2",
     "typescript": "^4.6.2",
     "web-vitals": "^2.1.4"
   },

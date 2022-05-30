@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Col, Container, Row} from 'react-bootstrap'
 import * as Icon from 'react-bootstrap-icons'
 import './ModalWindow.scss'
@@ -8,20 +8,34 @@ import {connect} from "react-redux";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import InputString from "../InputString/InputString";
 import InputMasked from "../InputMasked/InputMasked";
+import FormDataInterface from "../../Interfaces/FormDataInterface";
+import {Config} from "../../Config/Config";
+import axios from "axios";
+import {setErrorToast, setSuccessToast} from "../../Redux/actions/toast";
+import {useForm} from "react-hook-form";
+import IModalWindowData from "../../Interfaces/IModalWindowData";
+import LoaderHorizontal from "../LoaderHorizontal/LoaderHorizontal";
 
 interface ModalWindowProps {
     title?: string
     isActive: boolean
     hideRequestModal: () => void
+    setSuccessToast: (message: string) => void
+    setErrorToast: (message: string) => void
 }
 
-const name: string = ""
-const phone: number = 0
 
 const ModalWindow = (props: ModalWindowProps) => {
+
     useEffect(() => {
         bodyBlock()
     }, [])
+    const [loader, setLoader] = useState<boolean>(false)
+
+    const [name, setUserName] = useState<string>('')
+    const [userPhone, setUserPhone] = useState<string>('')
+    const [nameError, setNameError] = useState<boolean>(false)
+    const [phoneError, setPhoneError] = useState<boolean>(false)
 
     const bodyBlock = (): void => {
         document.querySelector('body')?.classList.add('modal-open')
@@ -31,9 +45,58 @@ const ModalWindow = (props: ModalWindowProps) => {
         document.querySelector('body')?.classList.remove('modal-open')
     }
 
+    const phoneChangeHandle = (phone: string) => {
+        setPhoneError(false)
+        setUserPhone(phone)
+    }
+    const nameChangeHandle = (name: string) => {
+        setPhoneError(false)
+        setUserName(name)
+    }
+
     const closeButtonHandler = (): void => {
         bodyUnBlock()
         props.hideRequestModal()
+    }
+
+    const showToast = (error: boolean, message: string): void => {
+        error ? props.setErrorToast(message) : props.setSuccessToast(message)
+    }
+
+    const sendButtonClick = (data: IModalWindowData) => {
+
+
+        const mailSettings = {
+            ...Config.mailSettings,
+            userName: data.name,
+            userPhone: data.phoneNumber,
+            siteUrl: Config.url,
+        }
+        console.log(userPhone.length)
+        if (name.trim().length === 0) {
+            setNameError(true)
+        }
+        if (userPhone.replaceAll('_','').length < 16) {
+            setPhoneError(true)
+        }
+        if (name.trim().length > 0 && userPhone.replaceAll('_','').length === 16) {
+            setLoader(true)
+            axios
+                .post(mailSettings.apiPath, mailSettings)
+                .then((res) => {
+                    if (res.status === 200) {
+                        console.log(res.data)
+                        showToast(false, 'Заявка успешно отправлена. Мы с вами свяжемся в ближайшее время.')
+                    } else {
+                        console.log('Ошибка отправки заявки.')
+                        showToast(true, 'Ошибка отправки заявки.')
+                    }
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+                .finally(() => setLoader(false))
+        }
     }
 
     return (
@@ -54,29 +117,46 @@ const ModalWindow = (props: ModalWindowProps) => {
                     <Container fluid className="ModalWindow__body">
                         <h4>Оставьте заявку</h4>
                         <p>Мы свяжемся с вами и ответим на все ваши вопросы</p>
-                        <InputString placeholder={"Ваше имя"} value={name} controlChangeHandler={() => console.log(222)}/>
-                        <InputMasked type={"phone"} value={phone} controlChangeHandler={() => console.log(222)}/>
-                        <ButtonComponent onClick={() => console.log(111)}> Отправить</ButtonComponent>
+                        <InputString placeholder={"Ваше имя"} value={name}
+                                     controlChangeHandler={(name) => nameChangeHandle(name)}
+                        />
+                        {nameError && <small style={{color: 'red'}}>Введите ваше имя</small>}
+                        <InputMasked type={"phone"} value={userPhone}
+                                     controlChangeHandler={(userPhone) => phoneChangeHandle(userPhone)}
+
+                        />
+                        {phoneError && <small style={{color: 'red'}}>Введите корректный номер телефона</small>}
+
+                        {loader ? (
+                            <LoaderHorizontal/>
+                        ) : (
+                            <ButtonComponent
+                                onClick={() => sendButtonClick({name, phoneNumber: userPhone})}> Отправить</ButtonComponent>
+                        )}
                         <p>Оставляя заявку, вы соглашаетесь с политикой конфиденциальности</p>
-                </Container>
-            </div>
-                </div>) : null}
+                    </Container>
+                </div>
+            </div>) : null}
 
-                </React.Fragment>
+        </React.Fragment>
 
-                )
-            }
+    )
+}
 
-            const mapDispatchToProps = {
-            hideRequestModal
-        }
+const mapDispatchToProps = {
+    hideRequestModal,
+    setSuccessToast,
+    setErrorToast,
+}
 
-            const mapStateToProps = (state: RootState) => {
-            const isActive: boolean = state.modal.modalRequestForm.isActive
-            return {
-            isActive,
-        }
-        }
+const mapStateToProps = (state: RootState) => {
+    const isActive: boolean = state.modal.modalRequestForm.isActive
+    const toast = state.toast
+    return {
+        isActive,
+        toast
+    }
+}
 
-            export default connect(mapStateToProps, mapDispatchToProps)(ModalWindow)
+export default connect(mapStateToProps, mapDispatchToProps)(ModalWindow)
 

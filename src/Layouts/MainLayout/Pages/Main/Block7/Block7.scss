@@ -1,14 +1,14 @@
 .Block7 {
   background-color: #FFF1C1;
-  min-height: 400px;
-  padding: 100px 0px;
+  padding: 100px 0;
   .ButtonComponent {
     // background-color: aquamarine;
   }
 
   .Block7__swiper-slide{
     width: 100%;
-    margin: 20px 0px;
+    margin: 20px 0;
+
     
     p{
       font-family: Roboto, serif;
@@ -18,7 +18,7 @@
       line-height: 23px;
       color: #696969;
 
-      margin: 30px 0px;
+      margin: 30px 0;
     }
 
     .slide-image{
@@ -28,7 +28,7 @@
     .slide-header{
       display: flex;
       width: 100%;
-      margin: 60px 0px;
+      margin: 60px 0;
     }
 
   }

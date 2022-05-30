@@ -9,6 +9,7 @@ import Block3 from './Block3/Block3'
 import Block4 from './Block4/Block4'
 import ModalWindow from "../../../../SharedComponents/ModalWindow/ModalWindow";
 import Block5 from "./Block5/Block5";
+import Block8 from "./Block8/Block8";
 
 interface MainProps {
 }
@@ -25,8 +26,9 @@ class Main extends React.Component<MainProps, MainState> {
                 <Block3/>
                 <Block4/>
                 <Block5/>
-                {/* <Block6/>
-                <Block7/> */}
+                <Block6/>
+                <Block7/>
+                <Block8/>
                 <ModalWindow/>
             </Container>
         )
