@@ -1,6 +1,7 @@
 import Card4Inteface from '../Interfaces/Card4Inteface'
 import CardInterface from '../Interfaces/CardInterface'
 import MailSettingsInterface from '../Interfaces/MailSettingsInterface'
+import WorkInterface from '../Interfaces/WorkInterface'
 
 interface ConfigInterface {
   url: string
@@ -11,14 +12,15 @@ interface ConfigInterface {
   phoneNumber: string
   telegram: string
   whatsapp: string
+  works: WorkInterface[]
 }
 
 export const Config: ConfigInterface = {
   // url: 'http://localhost:3000/',
-  url: 'https://newg30.ru/',  
-  phoneNumber: "tel:89377596269",
-  telegram: "https://t.me/+79377596269",
-  whatsapp: "https://api.whatsapp.com/send?phone=+79377596269",
+  url: 'https://newg30.ru/',
+  phoneNumber: 'tel:89377596269',
+  telegram: 'https://t.me/+79377596269',
+  whatsapp: 'https://api.whatsapp.com/send?phone=+79377596269',
   mailSettings: {
     apiPath: '/api/index.php',
     senderMail: 'info@newg30.ru',
@@ -113,5 +115,43 @@ export const Config: ConfigInterface = {
     { num: '03', title: 'Договор', subtitle: 'Готовим договор и счет на оплату' },
     { num: '04', title: 'Монтаж', subtitle: 'Поставляем оборудование, устанавливаем и запускаем систему' },
     { num: '05', title: 'Сервисное обслуживание', subtitle: 'Профилактика и гарантийное обслуживание' },
+  ],
+  works: [
+    {
+      id: 1,
+      title: 'Название проекта11',
+      body: 'Высокий уровень вовлечения представителей целевой аудитории является доказательством простого факта: экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для вывода активов!',
+      imgPath: '/img/solar-panels-field 1.jpg',
+    },
+    {
+      id: 2,
+      title: 'Название проекта',
+      body: 'Высокий уровень вовлечения представителей целевой аудитории является доказательством простого факта: экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для вывода активов!',
+      imgPath: '/img/solar-panels-field 1.jpg',
+    },
+    {
+      id: 3,
+      title: 'Название проекта',
+      body: 'Высокий уровень вовлечения представителей целевой аудитории является доказательством простого факта: экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для вывода активов!',
+      imgPath: '/img/solar-panels-field 1.jpg',
+    },
+    // {
+    //   id: 4,
+    //   title: 'Название проекта',
+    //   body: 'Высокий уровень вовлечения представителей целевой аудитории является доказательством простого факта: экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для вывода активов!',
+    //   imgPath: '/img/solar-panels-field 1.jpg',
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Название проекта',
+    //   body: 'Высокий уровень вовлечения представителей целевой аудитории является доказательством простого факта: экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для вывода активов!',
+    //   imgPath: '/img/solar-panels-field 1.jpg',
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Название проекта',
+    //   body: 'Высокий уровень вовлечения представителей целевой аудитории является доказательством простого факта: экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для вывода активов!',
+    //   imgPath: '/img/solar-panels-field 1.jpg',
+    // },
   ],
 }

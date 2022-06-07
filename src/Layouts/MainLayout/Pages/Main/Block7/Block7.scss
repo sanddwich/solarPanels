@@ -1,16 +1,53 @@
 .Block7 {
-  background-color: #FFF1C1;
-  padding: 100px 0;
+  background-color: #fff1c1;
+  padding: 150px 0;
+
   .ButtonComponent {
     // background-color: aquamarine;
   }
 
-  .Block7__swiper-slide{
-    width: 100%;
-    margin: 20px 0;
+  .Block7__swTitle {
+    padding: 0;
+    margin: 0;
+  }
 
-    
-    p{
+  .swiper-controls {
+    margin: 0;
+  }
+
+  h2 {
+    font-family: 'SFProDisplay-Bold';
+    font-size: 64px;
+    line-height: 76px;
+    padding-bottom: 50px;
+
+    color: #202020;
+  }
+
+  .swiper-controls__cont {
+    position: relative;
+    z-index: 30;
+    margin-bottom: -60px;
+  }
+
+  .swiper-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .slide-text {
+    @media screen and(max-width: 992px) {
+      padding-top: 50px;
+    }
+  }
+
+  .Block7__swiper-slide {
+    width: 100%;
+    // margin-top: -50px;
+    // position: relative;
+    // z-index: 50;
+
+    p {
       font-family: Roboto, serif;
       font-style: normal;
       font-weight: 400;
@@ -21,19 +58,17 @@
       margin: 30px 0;
     }
 
-    .slide-image{
-     margin-right: 30px;
+    .slide-image {
+      padding-right: 30px;
     }
 
-    .slide-header{
+    .slide-header {
       display: flex;
       width: 100%;
-      margin: 60px 0;
+      padding-bottom: 30px;
     }
-
   }
 
   @media screen and(max-width: 1920px) {
-    
   }
 }
