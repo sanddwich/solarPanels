@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { RootState } from '../../Redux'
 import { ModalState } from '../../Redux/interfaces/interfaces'
-import { setMobileMenuModal } from '../../Redux/actions/modal'
+import { setMobileMenuModal, showRequestModal } from '../../Redux/actions/modal'
 import './MobileMenu.scss'
 import { connect } from 'react-redux'
 import { scroller } from 'react-scroll'
@@ -11,6 +11,7 @@ import ButtonComponent from '../ButtonComponent/ButtonComponent'
 
 interface MobileMenuProps {
   setMobileMenuModal: (isActive: boolean) => void
+  showRequestModal: () => void
   modal: ModalState
 }
 
@@ -24,6 +25,11 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
     this.state = {
       messangers: ['https://www.instagram.com/victor__gromov/', 'https://api.whatsapp.com/send?phone=+79171874086'],
     }
+  }
+
+  requestModalOpen = (): void => {
+    this.closeButton()
+    this.props.showRequestModal()
   }
 
   bodyBlock = (): void => {
@@ -88,7 +94,7 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
           </Col>
         </Row>
         <div className='MobileMenu__buttonCont d-flex justify-content-start'>
-          <ButtonComponent onClick={this.callOrder}>
+          <ButtonComponent onClick={() => this.requestModalOpen()}>
             <div>Заказать звонок</div>
           </ButtonComponent>
         </div>
@@ -99,6 +105,7 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
 
 const mapDispatchToProps = {
   setMobileMenuModal,
+  showRequestModal,
 }
 
 const mapStateToProps = (state: RootState) => {

@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { RootState } from '../../../../../Redux'
-import { setMobileMenuModal } from '../../../../../Redux/actions/modal'
+import { setMobileMenuModal, showRequestModal } from '../../../../../Redux/actions/modal'
 import ButtonComponent from '../../../../../SharedComponents/ButtonComponent/ButtonComponent'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { scroller } from 'react-scroll'
@@ -12,6 +12,7 @@ import { Config } from '../../../../../Config/Config'
 
 interface Block1Props {
   setMobileMenuModal: (isActive: boolean) => void
+  showRequestModal: () => void
 }
 
 const Block1 = (props: Block1Props) => {
@@ -76,7 +77,7 @@ const Block1 = (props: Block1Props) => {
             </AnimationOnScroll>
           </div>
           <div className="Block1__callButton d-none d-sm-block">
-            <ButtonComponent onClick={whatsappChat}>
+            <ButtonComponent onClick={() => props.showRequestModal()}>
               <div>Заказать звонок</div>
             </ButtonComponent>
           </div>
@@ -111,6 +112,7 @@ const Block1 = (props: Block1Props) => {
 
 const mapDispatchToProps = {
   setMobileMenuModal,
+  showRequestModal
 }
 
 const mapStateToProps = (state: RootState) => {

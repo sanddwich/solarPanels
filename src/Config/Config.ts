@@ -27,9 +27,9 @@ export const Config: ConfigInterface = {
     userName: '',
     userPhone: '',
     userEmail: '',
-    recipientMail: 'bck-dkiselev@yandex.ru',
-    userComment: ''
-    // recipientMail: 'airmix_pods@mail.ru',
+    // recipientMail: 'bck-dkiselev@yandex.ru',
+    recipientMail: 'mail@newg30.ru',
+    userComment: '',
   },
   cardList: [
     {
