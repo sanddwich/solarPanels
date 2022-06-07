@@ -5,7 +5,13 @@
   padding-bottom: 50px;
 
   .ButtonComponent {
-    // background-color: aquamarine;
+    width: 80%;
+    margin-top: 30px;
+    text-align: center;
+
+    @media screen and(max-width: 500px) {
+      width: 95%;
+    }
   }
 
   .Block6__card-deck {

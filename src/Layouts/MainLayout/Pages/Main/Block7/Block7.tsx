@@ -66,7 +66,7 @@ const Block7 = (props: Block7Props) => {
                     интересные особенности картины в целом, однако конкретные выводы, разумеется, описаны максимально
                     подробно.
                   </p>
-                  <h4>Что было сделано:</h4>
+                  <h4 className="Slide_h4">Что было сделано:</h4>
                   <p>
                     <ul>
                       <li>Установили солнечные панели.</li>
@@ -115,6 +115,14 @@ const Block7 = (props: Block7Props) => {
             </div>
           </SwiperSlide>
         </Swiper>
+        <Container fluid className="Block7__swTitle">
+          <div className="swiper-controls d-flex justify-content-center">
+            <div className="swiper-controls__cont d-flex d-sm-none flex-wrap pt-5 pb-5">
+              <div className="swiper-prev swiper-btn" />
+              <div className="swiper-next swiper-btn" />
+            </div>
+          </div>
+        </Container>
       </Container>
     </Container>
   )

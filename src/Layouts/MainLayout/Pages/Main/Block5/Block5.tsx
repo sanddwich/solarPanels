@@ -27,9 +27,8 @@ const Block5 = (props: Block5Props) => {
     formState: { errors },
   } = useForm<FormDataInterface>({})
 
-  
   const whatsappChat = () => {
-    window.open(Config.whatsapp, "_blank")
+    window.open(Config.whatsapp, '_blank')
   }
 
   const showToast = (error: boolean, message: string): void => {
@@ -185,14 +184,16 @@ const Block5 = (props: Block5Props) => {
             </AnimationOnScroll>
 
             <div className="Block5__button d-block d-md-none">
-              <ButtonComponent onClick={whatsappChat}>
-                <div className="Block5__buttonCont d-flex justify-content-between align-items-baseline">
-                  <div className="Block5__buttonTitle">Либо напишите ваш вопрос на WhatsApp</div>
-                  <div className="Block5__buttonImg">
-                    <img src="/img/wa.svg" alt="" />
+              <a href={Config.whatsapp}>
+                <ButtonComponent onClick={() => console.log('123213123')}>
+                  <div className="Block5__buttonCont d-flex justify-content-between align-items-baseline">
+                    <div className="Block5__buttonTitle">Либо напишите ваш вопрос на WhatsApp</div>
+                    <div className="Block5__buttonImg">
+                      <img src="/img/wa.svg" alt="" />
+                    </div>
                   </div>
-                </div>
-              </ButtonComponent>
+                </ButtonComponent>
+              </a>
             </div>
           </Col>
         </Row>

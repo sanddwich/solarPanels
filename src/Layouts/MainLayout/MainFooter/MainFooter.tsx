@@ -72,8 +72,8 @@ const MainFooter = (props: MainFooterProps) => {
                     <div className="MainFooter__politics">Политика конфиденциальности</div>
                     <div className="MainFooter__socialBlock">
                         <img onClick={telegramChat} className="hvr-shrink" src="/img/tg.svg" alt="telegram"/>
-                        <a
-                            href="https://instagram.com/new_generation_ru"><img className="hvr-shrink" src="/img/inst.svg" alt="instagram"/></a>
+                        {/* <a
+                            href="https://instagram.com/new_generation_ru"><img className="hvr-shrink" src="/img/inst.svg" alt="instagram"/></a> */}
                        <img onClick={whatsappChat} className="hvr-shrink" src="/img/wa.svg" alt="whatsapp"/>
 
 

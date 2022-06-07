@@ -3,13 +3,25 @@
   padding: 150px 0;
 
   .ButtonComponent {
-    // background-color: aquamarine;
+    text-align: center;
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media screen and(max-width: 576px) {
+      margin-top: 0;
+    }
   }
 
   .Block7__swTitle {
     padding: 0;
     margin: 0;
+
+    @media screen and(max-width: 576px) {
+      // height: 50px;
+    }
   }
+
 
   .swiper-controls {
     margin: 0;
@@ -22,6 +34,20 @@
     padding-bottom: 50px;
 
     color: #202020;
+
+    @media screen and(max-width: 576px) {
+      padding-bottom: 20px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  h3,
+  h4 {
+    @media screen and(max-width: 576px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   .swiper-controls__cont {
@@ -41,6 +67,11 @@
     }
   }
 
+  ul li::before {
+    position: absolute;
+    margin-left: -30px;
+  }
+
   .Block7__swiper-slide {
     width: 100%;
     // margin-top: -50px;
@@ -56,10 +87,26 @@
       color: #696969;
 
       margin: 30px 0;
+
+      @media screen and(max-width: 576px) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+    .Slide_h4 {
+      padding-top: 40px;
+      @media screen and(max-width: 576px) {
+        padding-top: 10px;
+      }
     }
 
     .slide-image {
       padding-right: 30px;
+
+      img {
+        border-radius: 8px;
+      }
     }
 
     .slide-header {
@@ -69,6 +116,7 @@
     }
   }
 
-  @media screen and(max-width: 1920px) {
+  @media screen and(max-width: 576px) {
+    padding: 100px 10px;
   }
 }
