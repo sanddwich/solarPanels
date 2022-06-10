@@ -26,8 +26,8 @@ class Main extends React.Component<MainProps, MainState> {
                 <Block3/>
                 <Block4/>
                 <Block5/>
-                <Block6/>
-                <Block7/>
+                {/* <Block6/>
+                <Block7/> */}
                 <Block8/>
                 <ModalWindow/>
             </Container>

@@ -9,6 +9,7 @@ interface ConfigInterface {
   cardList: CardInterface[]
   miniCardList: CardInterface[]
   card4List: Card4Inteface[]
+  phone: string
   phoneNumber: string
   telegram: string
   whatsapp: string
@@ -19,6 +20,7 @@ interface ConfigInterface {
 export const Config: ConfigInterface = {
   // url: 'http://localhost:3000/',
   url: 'https://newg30.ru/',
+  phone: '89377596269',
   phoneNumber: 'tel:89377596269',
   telegram: 'https://t.me/+79377596269',
   whatsapp: 'https://api.whatsapp.com/send?phone=+79377596269',
