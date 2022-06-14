@@ -86,6 +86,8 @@ const ModalWindow = (props: ModalWindowProps) => {
                 .then((res) => {
                     if (res.status === 200) {
                         console.log(res.data)
+                        setUserName('')
+                        setUserPhone('')
                         showToast(false, 'Заявка успешно отправлена. Мы с вами свяжемся в ближайшее время.')
                     } else {
                         console.log('Ошибка отправки заявки.')
@@ -95,7 +97,10 @@ const ModalWindow = (props: ModalWindowProps) => {
                 .catch((error) => {
                     console.log(error)
                 })
-                .finally(() => setLoader(false))
+                .finally(() => {
+                    setLoader(false)
+                    closeButtonHandler()
+                })
         }
     }
 

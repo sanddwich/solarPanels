@@ -24,10 +24,18 @@ const Block5 = (props: Block5Props) => {
   const {
     register,
     handleSubmit,
+    resetField,
     formState: { errors },
   } = useForm<FormDataInterface>({})
 
-  const whatsappChat = () => {
+  const resetFields = (): void => {
+    resetField('email')
+    resetField('name')
+    resetField('phoneNumber')
+    resetField('comment')
+  }
+
+  const whatsappChat = (): void => {
     window.open(Config.whatsapp, '_blank')
   }
 
@@ -51,7 +59,8 @@ const Block5 = (props: Block5Props) => {
       .post(mailSettings.apiPath, mailSettings)
       .then((res) => {
         if (res.status === 200) {
-          console.log(res.data)
+          // console.log(res.data)
+          resetFields()
           showToast(false, 'Заявка успешно отправлена. Мы с вами свяжемся в ближайшее время.')
         } else {
           console.log('Ошибка отправки заявки.')
@@ -185,7 +194,7 @@ const Block5 = (props: Block5Props) => {
 
             <div className="Block5__button d-block d-md-none">
               <a href={Config.whatsapp}>
-                <ButtonComponent onClick={() => console.log('123213123')}>
+                <ButtonComponent onClick={whatsappChat}>
                   <div className="Block5__buttonCont d-flex justify-content-between align-items-baseline">
                     <div className="Block5__buttonTitle">Либо напишите ваш вопрос на WhatsApp</div>
                     <div className="Block5__buttonImg">
