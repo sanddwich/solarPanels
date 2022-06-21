@@ -189,7 +189,12 @@ const Block5 = (props: Block5Props) => {
               </div>
             </AnimationOnScroll>
             <AnimationOnScroll animateOnce={true} offset={100} delay={1200} animateIn="animate__fadeIn">
-              <div className="Block5__subtitle">Отправляя заявку, вы соглашаетесь с политикой конфиденциальности</div>
+              <div className="Block5__subtitle">
+                Отправляя заявку, вы соглашаетесь с{' '}
+                <a href="./politic.pdf" target={`_blank`}>
+                  политикой конфиденциальности
+                </a>
+              </div>
             </AnimationOnScroll>
 
             <div className="Block5__button d-block d-md-none">

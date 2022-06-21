@@ -18,7 +18,9 @@ const Block8 = () => {
           </div>
           <div className="col-xl-4 col-md-4 col-12 Block8__contact">
             <div className="Block8__contact-label">Почта</div>
-            <div className="Block8__contact-text">info@newgeneration.ru</div>
+            <div className="Block8__contact-text">
+              <a href="mailto:mail@newg30.ru">mail@newg30.ru</a>
+            </div>
           </div>
           <div className="col-xl-4 col-md-4 col-12 Block8__contact">
             <div className="Block8__contact-label">Телефон</div>

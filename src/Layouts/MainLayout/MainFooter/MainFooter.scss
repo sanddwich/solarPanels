@@ -1,14 +1,13 @@
 .MainFooter {
   display: flex;
-  background-color: #3C3C3C;
+  background-color: #3c3c3c;
   width: 100%;
-  padding-top:50px;
+  padding-top: 50px;
   font-family: 'TTNorms-Medium', serif;
   .hvr-underline-from-left:before {
     background: #ffffff;
     height: 2px;
   }
-
 
   .MainFooter__navigation {
     align-content: center;
@@ -42,10 +41,9 @@
     }
   }
 
-
   .MainFooter__row1 {
-    a{
-      text-decoration: none   ;
+    a {
+      text-decoration: none;
     }
     width: 100%;
     display: flex;
@@ -59,7 +57,6 @@
     }
 
     .MainFooter__Logo {
-
       .MainFooter__LogoText {
         color: #ffffff;
 
@@ -74,7 +71,6 @@
           margin: 20px 30px;
         }
       }
-
     }
 
     .MainFooter__callButton {
@@ -93,11 +89,9 @@
         width: 250px;
       }
       @media screen and(max-width: 576px) {
-
         margin: 20px 30px;
       }
     }
-
   }
 
   .MainFooter__row2 {
@@ -109,27 +103,31 @@
     margin: 80px 0;
     color: #ffffff;
     font-size: 18px;
-    img{
+    img {
       cursor: pointer;
     }
 
-
-    .MainFooter__politics{
+    .MainFooter__politics {
       order: 1;
+
+      a {
+        color: #ffffff;
+      }
+
       @media screen and(max-width: 576px) {
         order: 2;
         margin: 20px 30px;
-        width:100%;
+        width: 100%;
       }
     }
 
-    .MainFooter__socialBlock{
+    .MainFooter__socialBlock {
       display: flex;
       order: 2;
       @media screen and(max-width: 576px) {
         order: 1;
         margin: 20px 30px;
-        width:100%;
+        width: 100%;
       }
     }
 
@@ -138,16 +136,15 @@
       @media screen and(max-width: 576px) {
         order: 3;
         margin: 20px 30px;
-        width:100%;
+        width: 100%;
       }
     }
 
-    img{
+    img {
       padding: 0 11px;
     }
   }
   @media screen and(max-width: 1199px) {
     padding-top: 100px;
   }
-
 }
