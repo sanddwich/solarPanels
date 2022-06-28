@@ -47,7 +47,7 @@
     }
 
     @media screen and(max-width: 576px) {
-      padding-top: 50px;
+      padding-top: 100px;
       font-size: 28px;
       line-height: 33px;
       text-align: left;
@@ -156,18 +156,18 @@
     min-height: 800px;
   }
   @media screen and(max-width: 1280px) {
-    min-height: 668px;
+    min-height: 768px;
   }
   @media screen and(max-width: 960px) {
-    min-height: 540px;
+    min-height: 640px;
   }
   @media screen and(max-width: 854px) {
-    min-height: 480px;
+    min-height: 580px;
   }
   @media screen and(max-width: 640px) {
-    min-height: 360px;
+    min-height: 460px;
   }
   @media screen and(max-width: 576px) {
-    min-height: 600px;
+    min-height: 680px;
   }
 }
